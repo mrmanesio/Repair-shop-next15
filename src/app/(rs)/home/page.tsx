@@ -1,11 +1,4 @@
-import { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Home Page",
-  description: "Home Page",
-};
-
-export default function Home() {
+export default function HomePage() {
   return (
     <div>
       <h2>Home</h2>
