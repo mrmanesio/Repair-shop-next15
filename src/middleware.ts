@@ -3,11 +3,7 @@ import { NextRequest } from "next/server";
 
 export default withAuth(
     async function middleware(req: NextRequest) {
-        console.log('🔒 MIDDLEWARE TRIGGERED');
         console.log('URL:', req.url);
-        console.log('Path:', req.nextUrl.pathname);
-        console.log('Auth status:', req);
-        console.log('-------------------');
     }, {
     isReturnToCurrentPage: true,
 }
