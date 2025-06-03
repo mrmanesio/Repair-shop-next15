@@ -6,7 +6,7 @@ export const insertCustomerSchema = z.object({
   firstName: z.string().min(1, 'First name is required'),
   lastName: z.string().min(1, 'Last name is required'),
   email: z.string().email('Invalid email address'),
-  phone: z.string().regex(/^\d{10}$/, 'Invalid phone number'),
+  phone: z.string().regex(/^\d{3}-\d{3}-\d{4}$/, 'Invalid phone number format. Use XXX-XXX-XXXX'),
   address1: z.string().min(1, 'Address is required'),
   address2: z.string().nullable().optional(),
   city: z.string().min(1, 'City is required'),
