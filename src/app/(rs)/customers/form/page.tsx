@@ -9,12 +9,10 @@ export default async function CustomerFormPage({
 }) {
   try {
     const { customerId } = await searchParams;
-    console.log('customerId', customerId);
     
     // Edit cutomer form
     if (customerId) {
       const customer = await getCustomer(parseInt(customerId));
-      console.log('customer', customer);
       if (!customer) {
         return (
           <>
